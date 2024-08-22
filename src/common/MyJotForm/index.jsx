@@ -5,7 +5,6 @@ const MyJotForm = () => {
   const [iframeLoaded, setIframeLoaded] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [response, setResponse] = useState({});
   const [downloadUrl, setDownloadUrl] = useState("")
 
   useEffect(() => {
@@ -139,8 +138,6 @@ const MyJotForm = () => {
           // Fetch data from JotForm
           const jotformResponse = await fetch(`https://api.jotform.com/form/242281979236062/submissions?apiKey=09112de56b04f72a6b01037e5acda05c`);
           const jotformData = await jotformResponse.json();
-          setResponse(jotformData.content);
-          console.log(response, "response");
           console.log(jotformData.content[0], "content")
           // Post data to DocuGenerate
           const docuGenerateResponse = await fetch('https://api.docugenerate.com/v1/document', {
