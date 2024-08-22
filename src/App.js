@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import LandingPage from "./pages/LandingPage/index"
 import Agreements from './pages/Agreements';

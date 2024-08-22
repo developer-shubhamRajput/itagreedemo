@@ -140,6 +140,7 @@ const MyJotForm = () => {
           const jotformResponse = await fetch(`https://api.jotform.com/form/242281979236062/submissions?apiKey=09112de56b04f72a6b01037e5acda05c`);
           const jotformData = await jotformResponse.json();
           setResponse(jotformData.content);
+          console.log(response, "response");
           console.log(jotformData.content[0], "content")
           // Post data to DocuGenerate
           const docuGenerateResponse = await fetch('https://api.docugenerate.com/v1/document', {
